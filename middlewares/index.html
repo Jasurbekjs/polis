@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+
+   .border td {
+        border: 1px solid black;
+       padding: 5px;
+        text-align: left;
+    }
+    .in td{
+        border: none;
+    }
+    table {
+        border-collapse: collapse;
+        text-align: center;
+        width: 100%;
+    }
+</style>
+<div style="padding: 50px">
+    <br/><br/>
+    <table>
+        <tr>
+            <td width="10%" rowspan="3">
+                <img src='${qr}' alt="">
+            </td>
+            <td width="90%">
+                <strong align="center">ПОЛИС № ${notification.policy}</strong></b>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong align="center">СТРАХОВАНИЯ ГРАЖДАНСКОЙ ОТВЕТСТВЕННОСТИ ПЕРЕВОЗЧИКОВ</strong>
+            </td>
+        </tr>
+        <tr>
+            <td><strong align="center"> ПО УПЛАТЕ ТАМОЖЕННЫХ ПЛАТЕЖЕЙ</strong></td>
+        </tr>
+    </table>
+    <br/><br/>
+    <table class="border">
+        <tr class="border">
+            <td width="10%"><strong align="center">1</strong></td>
+            <td width="30%"> <strong> Страхователь: </strong> </td>
+            <td width="60%"> ${notification.policyholder} </td>
+        </tr>
+        <tr>
+            <td><strong align="center">2.1</strong></td>
+            <td><strong> Реквизиты Страхователя: </strong></td>
+            <td> ${notification.country} </td>
+        </tr>
+        <tr>
+            <td><strong align="center">2.2</strong></td>
+            <td><strong> Паспортные данные Страхователя: </strong></td>
+            <td> ${notification.pass}</td>
+        </tr>
+        <tr>
+            <td><strong align="center">3</strong></td>
+            <td><strong> Выгодоприобретатель: </strong></td>
+            <td> Государственный Таможенный комитет РУз </td>
+        </tr>
+        <tr>
+            <td><strong align="center">4</strong></td>
+            <td><strong> Наименование Таможенного пункта отправки:</strong></td>
+            <td> ${notification.custom_entry}</td>
+        </tr>
+        <tr>
+            <td><strong align="center">5</strong></td>
+            <td><strong> Наименование Таможенного поста по адресу:</strong></td>
+            <td> ${notification.custom_exit} </td>
+        </tr>
+        <tr>
+            <td><b align="center">6</b></td>
+            <td><b> Данные транспортного средства: </b></td>
+            <td class="in">
+                <table>
+                    <tr>
+                        <td> Марка (модель): ${notification.mark} </td>
+                    </tr>
+                    <tr>
+                        <td> Госуд. регистрац. номер: ${notification.tractor}</td>
+                    </tr>
+                    <tr>
+                        <td> Номер тех. паспорта: ${notification.tech_pass} </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td><b align="center">7</b></td>
+            <td><b> Период страхования: </b></td>
+            <td> ${notification.period} </td>
+        </tr>
+        <tr>
+            <td><b align="center">8</b></td>
+            <td><b> Страховая сумма: </b></td>
+            <td> ${notification.sum} </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
